@@ -22,6 +22,7 @@ public class ThirstPersonControler : MonoBehaviour
         DeathsText.text = PlayerPrefs.GetInt("Deaths").ToString();
         Rb = this.GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     void Update()
     {
@@ -87,5 +88,6 @@ public class ThirstPersonControler : MonoBehaviour
         BestTime.text = PlayerPrefs.GetFloat("Time").ToString();
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
